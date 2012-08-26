@@ -7,3 +7,6 @@
 [submodule "lib/layout"]
 	path = lib/layout
 	url = https://github.com/enyojs/layout.git
+[submodule "fermata"]
+	path = lib/fermata
+	url = https://github.com/natevw/fermata.git
