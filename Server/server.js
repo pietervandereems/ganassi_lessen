@@ -2,7 +2,8 @@ var couchdbConfig, express, fermata, couchdb, personaConfig, persona, couchurl, 
 
 // Initialization
 couchdbConfig =  {
-    url: 'http://127.0.0.1:5984'
+    url: 'https://ganassi.iriscouch.com/', // Iris Couch Hosting.
+    lessons: 'lessons'
 };
 
 // Load Libraries.
