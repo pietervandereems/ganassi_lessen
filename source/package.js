@@ -1,6 +1,10 @@
 enyo.depends(
 	"$lib/layout",
 	"$lib/onyx",
+	"$lib/fermata/fermata.js",
 	"App.css",
+	"Config.js",
+	"LessonList.js",
+	"Lesson.js",
 	"App.js"
 );
