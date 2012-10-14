@@ -5,7 +5,9 @@ enyo.kind({
     classes: "app-panels",
     arrangerKind: "CollapsingArranger",
     components: [
-        {name: "List", kind: "ganassi.LessonList"},
-        {name: "Content", kind: "ganassi.Lesson"}
+        {name: "List", kind: "enyo.Scroller", components: [ 
+            {name: "Lessons", kind: "ganassi.LessonList"} 
+        ]},
+        {name: "Content"}
     ]
 });
