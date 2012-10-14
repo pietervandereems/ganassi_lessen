@@ -2,7 +2,7 @@ var couchdbConfig, express, fermata, couchdb, personaConfig, persona, couchurl, 
 
 // Initialization
 couchdbConfig =  {
-    url: 'https://ganassi.iriscouch.com/', // Iris Couch Hosting.
+    url: 'https://ganassi.iriscouch.com', // Iris Couch Hosting.
     lessons: 'lessons'
 };
 
@@ -22,15 +22,17 @@ persona = fermata.json(personaConfig.url);
 
 server = express();
 server.use(express.bodyParser());
-server.use(express.logger());
+//server.use(express.logger());
 
 
 // internal functions
 defaultResolve = function (res) {
     return function (inErr, inResult) {
         if (inErr) {
+            console.log('defaultResolve, error:', inErr);
             res.send(inErr);
         } else {
+            console.log('defaultResolve, result:', inResult);
             res.send(inResult);
         }
     }
@@ -38,9 +40,11 @@ defaultResolve = function (res) {
 
 // Used by /db/ functions
 couchurl = function (req, res) {
-    var pos = req.params[0].indexOf('/');
-    pos = (pos === -1) ? req.params[0].length : pos;
-    couchdb[req.params[0].slice(0, pos)](req.params[0].substr(pos + 1)).get(defaultResolve(res));
+    console.log(req.params);
+    //var pos = req.params[0].indexOf('/');
+    //pos = (pos === -1) ? req.params[0].length : pos;
+    //console.log('couchUrl,', req.params[0].slice(0, pos), req.params[0].substr(pos + 1), req.query);
+    couchdb(req.params)(req.query).get(defaultResolve(res));
 };
 
 /**** ROUTING ****/
