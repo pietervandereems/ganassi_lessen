@@ -17,6 +17,5 @@ enyo.singleton({
         this.inherited(arguments);
         this.lesson.db = couchdb(this.couchDB.lesson);
         this.lesson.view = this.lesson.db('_design/frontend/_view/');
-        console.log('crea');
     }
 })

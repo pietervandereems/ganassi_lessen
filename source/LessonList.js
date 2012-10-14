@@ -10,24 +10,29 @@ enyo.kind({
         },
         {
             kind: enyo.Repeater,
+            name: "listL",
             onSetupItem: "setRow",
             components: [{name: "text"}]
         }
-        ],
+    ],
     lessons: null,
     
     create: function () {
         this.inherited(arguments);
-        this.$.webService.send({reduce: false});
+        this.$.webService.send({
+            reduce: false,
+            startkey: JSON.stringify(["nl_NL", null]),
+            endkey: JSON.stringify(["nl_NL", {}])
+        });
     },
     listLessons: function (inSender, inEvent) {
-        enyo.log('r24,', ganassi.Config.couchDB.url + '/' + ganassi.Config.couchDB.lesson + '/' + ganassi.Config.lesson.viewUrl);
-        enyo.log('listLessons', inEvent.data);
+        lessons = inEvent.data.rows;
+        this.$.listL.setCount(inEvent.data.rows.length);
     },
     setRow: function (inSender, inEvent) {
         var item = inEvent.item,
             index = inEvent.index;
-        enyo.log("setRow", inSender, inEvent);
+        item.$.text.setContent(lessons[index].key[1]);
     }
 });
 
