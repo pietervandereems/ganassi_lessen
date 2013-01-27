@@ -1,0 +1,4 @@
+curl http://static.musescore.com/79831/c6194a880d/score.mxl
+
+79831 is the score ID
+c6194a880d is the secret (see api.example.score.txt)

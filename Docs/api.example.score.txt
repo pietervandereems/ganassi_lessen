@@ -1,0 +1,62 @@
+//curl http://api.musescore.com/services/rest/score/79831.json?oauth_consumer_key=Ls5PqD4zBibhVBwEsHCNyHcAUKDpWrWJ
+{
+    "id": "79831",
+    "vid": "108513",
+    "dates": {
+        "posted": "1356350592",
+        "lastupdate": "1356350671"
+    },
+    "secret": "c6194a880d",
+    "uri": "http:\/\/api.musescore.com\/services\/rest\/score\/79831",
+    "permalink": "http:\/\/musescore.com\/score\/79831",
+    "user": {
+        "uid": "34134",
+        "username": "Debberg"
+    },
+    "status": "ready",
+    "sharing": "public",
+    "comment_count": "0",
+    "favoriting_count": "1",
+    "view_count": "79",
+    "playback_count": "50",
+    "download_count": 25,
+    "genre": "",
+    "format": "",
+    "license": null,
+    "language": null,
+    "title": "The Muppetshow",
+    "description": "A short version of the muppetshow tune for three recorders",
+    "metadata":{
+        "title": "The muppetshow",
+        "subtitle": "gearr door E. Rensink",
+        "composer": "J. Henson & S. Pottle",
+        "poet": null,
+        "pages": "2",
+        "measures": "37",
+        "lyrics": "0",
+        "chordnames": "0",
+        "keysig": "0",
+        "duration": "36",
+        "dimensions": "210x297",
+        "parts": [
+            {
+                "part":{
+                    "name": "Alto Recorder",
+                    "program": "74"
+                }
+            },
+            {
+                "part": {
+                    "name": "Tenor Recorder",
+                    "program": "74"
+                }
+            },
+            {
+                "part": {
+                    "name": "Bass Recorder",
+                    "program": "74"
+                }
+            }
+        ]
+    }
+}
